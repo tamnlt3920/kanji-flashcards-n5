@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffc928">
   <title>Kanji Cards — Học từ vựng Nhật</title>
-  <link rel="stylesheet" href="assets/css/styles.css?v=a17eb72-shuffle">
+  <link rel="stylesheet" href="assets/css/styles.css?v=grammar-layout-1">
 </head>
 <body>
 <main class="shell">
-  <header class="top"><div class="brand"><div class="mark">学</div><div><strong>KANJI CARDS</strong><small>Không gian ôn tập tiếng Nhật</small></div></div><div class="top-actions"><span class="course-pill">BỘ TỪ VỰNG N5 · 705 THẺ</span><button id="reset">↺　Đặt lại tiến độ</button></div></header>
-  <div class="workspace">
+  <header class="top"><div class="brand"><div class="mark">学</div><div><strong>KANJI CARDS</strong><small>Không gian ôn tập tiếng Nhật</small></div></div><nav class="main-nav" role="tablist" aria-label="Khu vực học"><button id="libraryNav" class="nav-link active" role="tab" aria-selected="true">Từ vựng</button><button id="flashNav" class="nav-link" role="tab" aria-selected="false">Flashcard</button><button id="quizNav" class="nav-link" role="tab" aria-selected="false">Quiz</button></nav><div class="top-actions"><span class="course-pill">BỘ TỪ VỰNG N5 · 705 TỪ</span><button id="reset">↺　Đặt lại tiến độ</button></div></header>
+  <section id="libraryView" class="library-view" aria-label="Danh sách từ vựng N5">
+    <div class="library-heading"><div class="eyebrow">Từ vựng tiếng Nhật sơ cấp</div><h1>Từ vựng N5</h1><p>Tìm nghĩa, cách đọc và ví dụ. Chọn một từ để mở flashcard.</p></div>
+    <div class="library-toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Tìm từ, cách đọc, nghĩa hoặc ví dụ…" autocomplete="off" aria-label="Tìm từ vựng"></label><label class="library-select">Trạng thái<select id="libraryFilter"><option value="all">Tất cả</option><option value="review">Cần ôn</option><option value="known">Đã nhớ</option><option value="new">Chưa đánh dấu</option></select></label><label class="library-select">Loại từ<select id="libraryTypeFilter"><option value="all">Tất cả loại từ</option><option value="noun">Danh từ</option><option value="verb">Động từ</option><option value="adjective">Tính từ</option><option value="other">Khác</option></select></label><span id="libraryCount" class="library-count">705 từ</span></div>
+    <div class="table-wrap"><table class="vocab-table"><thead><tr><th scope="col">#</th><th scope="col">Từ vựng</th><th scope="col">Ví dụ</th><th scope="col">Nghĩa</th></tr></thead><tbody id="wordRows"></tbody></table></div>
+  </section>
+  <div id="workspace" class="workspace" hidden>
     <section class="study" aria-label="Khu vực học từ vựng">
-      <div class="study-head"><div class="study-intro"><div class="eyebrow">Học mỗi ngày, nhớ lâu hơn</div><h1 id="studyTitle">Một thẻ mỗi lần.</h1><p id="studyDescription">Lật thẻ để xem cách đọc, nghĩa và ví dụ minh họa.</p><div class="study-mode-actions"><div class="mode-switch" role="group" aria-label="Chế độ học"><button id="flashMode" class="mode-button active" aria-pressed="true">Flashcard</button><button id="quizMode" class="mode-button" aria-pressed="false">Trắc nghiệm</button></div><button id="shuffleToggle" class="mode-button shuffle-toggle" aria-pressed="false">⤨　Trộn thứ tự</button></div></div><span class="counter" id="counter"></span></div>
+      <div class="study-head"><div class="study-intro"><div class="eyebrow">Học mỗi ngày, nhớ lâu hơn</div><h1 id="studyTitle">Một thẻ mỗi lần.</h1><p id="studyDescription">Lật thẻ để xem cách đọc, nghĩa và ví dụ minh họa.</p><div class="study-mode-actions"><button id="shuffleToggle" class="mode-button shuffle-toggle" aria-pressed="false">⤨　Trộn thứ tự</button></div></div><span class="counter" id="counter"></span></div>
       <div class="card-stage" id="stage"></div>
       <div class="controls" id="flashControls"><button class="icon-btn" id="prev" aria-label="Thẻ trước">←</button><button class="primary" id="flip">Lật thẻ <span>↗</span></button><button class="icon-btn" id="next" aria-label="Thẻ tiếp">→</button></div>
       <div class="status-actions" id="statusActions"><button class="secondary review" id="markReview">↻　Cần ôn</button><button class="secondary known" id="markKnown">✓　Đã nhớ</button></div>
@@ -26,7 +31,7 @@
     </aside>
   </div>
 </main>
-<script src="assets/js/vocabulary.js?v=a17eb72-shuffle"></script>
-<script src="assets/js/app.js?v=a17eb72-shuffle"></script>
+<script src="assets/js/vocabulary.js?v=grammar-layout-1"></script>
+<script src="assets/js/app.js?v=grammar-layout-1"></script>
 </body>
 </html>
