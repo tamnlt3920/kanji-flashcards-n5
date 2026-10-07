@@ -18,6 +18,7 @@ Open `index.html` in a modern browser, or serve this directory with any static H
 - 705 N5 vocabulary flashcards with Japanese examples and Vietnamese translations.
 - Furigana above kanji in example sentences.
 - Filters for part of speech and learning status.
+- Multiple-choice quiz mode with answer feedback, score tracking, and vocabulary filters.
 - Keyboard navigation and browser-local progress storage.
 - Responsive layout for laptop and mobile screens.
 
