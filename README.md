@@ -20,6 +20,7 @@ Open `index.html` in a modern browser, or serve this directory with any static H
 - Filters for part of speech and learning status.
 - Multiple-choice quiz mode with answer feedback, score tracking, and vocabulary filters.
 - Keyboard navigation and browser-local progress storage.
+- Remembers the current flashcard and supports a persistent, optional shuffled order.
 - Responsive layout for laptop and mobile screens.
 
 ## Publish
